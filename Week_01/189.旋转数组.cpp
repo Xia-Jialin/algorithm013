@@ -14,7 +14,7 @@ class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
         int length = nums.size();
-        k %= size(nums);
+        k %= length;
         reverse(&nums[0],&nums[length]);//反转全部元素
         reverse(&nums[0],&nums[k]);//反转左侧元素
         reverse(&nums[k],&nums[length]);//反转右侧元素
